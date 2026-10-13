@@ -1,0 +1,27 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: faulty-app
+  namespace: ai-testing
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: faulty-app
+  template:
+    metadata:
+      labels:
+        app: faulty-app
+    spec:
+      containers:
+        - name: faulty-app
+          image: busybox:1.36
+          command:
+            - /bin/sh
+            - -c
+          args:
+            - |
+              echo "ERROR: Database connection refused"
+              echo "ERROR: Application startup failed"
+              exit 1
