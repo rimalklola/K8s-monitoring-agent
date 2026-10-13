@@ -1,6 +1,6 @@
 \# Kubernetes AI Monitoring Assistant
 
-
+hi indiana, you can do all this or you can use a script i made for you that does it all in one click, the script is called setup.ps1 you can run it with "powershell -ExecutionPolicy Bypass -File .\setup.ps1"  hopefully it works, but there are some things you stil have to do manually
 
 CloudSys — Project 5: Monitoring Kubernetes Clusters with AI
 
